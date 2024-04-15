@@ -1,0 +1,508 @@
+/* Designing overall page*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+/*Setting Up CSS Box Model*/
+*{
+	box-sizing: border-box;
+	margin:0;
+}
+
+/*Setting Up Body*/
+body{
+  margin:0;
+  line-height: 1.5;
+  background-color: #f8f8ff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+ }
+
+/*Designing Container Classes*/
+  .container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+/* Designing Header */
+.header{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index:99;
+	transition: all 0.1s ease;
+}
+
+.header.fixed{
+	background-color: #ffffff;
+	position: fixed;
+}
+.header .fish-name{
+	padding:0 15px;
+}
+.header .fish-name a{
+	text-decoration: none;
+	font-size: 28px;
+	color:#ffffff;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing:1px;
+	transition: all 0.5s ease;
+}
+.header.fixed .fish-name a{
+	color:#000000;
+}
+
+
+.header .nav-toggle{
+	width: 40px;
+	height: 34px;
+	border:1px solid #ffffff;
+	border-radius: 3px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease;
+	display: none;
+}
+.header.fixed .nav-toggle{
+   border-color: #000000;
+}
+.header .nav-toggle span{
+	height: 1px;
+	display: block;
+	width: 16px;
+	background-color: #ffffff;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.header .nav-toggle span:before,
+.header .nav-toggle span:after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	height: 1px;
+	width: 100%;
+	background-color: #ffffff;
+	transition: all 0.5s ease;
+}
+.header.fixed .nav-toggle span,
+.header.fixed .nav-toggle span:before,
+.header.fixed .nav-toggle span:after{
+  background-color: #000000;
+}
+.header .nav-toggle span:before{
+	transform:translateY(-6px);
+}
+.header .nav-toggle span:after{
+	transform:translateY(6px);
+}
+
+.header .nav{
+	padding:0 15px;
+}
+.header .nav ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 30px;
+}
+.header .nav ul li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: rgb(253, 255, 130);
+	padding:25px 0;
+	display: block;
+	transition: all 0.5s ease;
+}
+.header.fixed .nav ul li a{
+  color:#000000;
+}
+.header.fixed .nav ul li a:hover,
+.header .nav ul li a:hover{
+	color:white;
+	transition: text-transform 0.3s ease;
+	text-transform: uppercase;
+}
+
+/* Designing Home section */
+.home-section{
+    min-height: 100vh;
+    background-image: url('../imgs/grouper4.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding:0 15px;
+}
+
+
+/* Designing About section */
+.about-section{
+	padding:80px 0 0;
+}
+
+/* Designing Prey & Predators Section */
+
+.predators-section{
+	display: flex;
+	justify-content: center;
+	padding:80px 0 0;
+	
+}
+
+.predators-section-table-row-td {
+	text-align: center;
+	padding: 10px 120px 10px 120px;
+
+}
+
+.prey-predator-heading{
+	text-align: center;
+	color: #000000;
+	letter-spacing: 2px;
+}
+
+
+/* Designing Food Section */
+
+.gallery-section{
+	padding:80px 0 0;
+}
+
+/* Designing World Count Section */
+
+.count-section{
+	padding:80px 0 0;
+}
+
+.count-header {
+	display: flex;
+	justify-content: center;
+}
+
+.count-text {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 20px 400px 200px 400px;
+}
+
+.honesty {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.honesty ul {
+    list-style: none;
+}
+
+.honesty ol {
+    list-style-type: disc;
+}
+
+.honesty a {
+    color:teal;
+}
+
+/**/
+
+
+.about-img-div {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.about-img1 {
+	height: 200px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 15px;
+}
+
+.about-img1:hover {
+	scale: 1.065;
+	box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.5);
+}
+
+.about-h1 {
+	color: #000000;
+	text-align: center;
+	margin: 20px 0px 40px 0px;
+	font-size: 28px;
+}
+.about-p {
+	color: #000000;
+	text-align: center;
+	padding: 0px 300px 0px 300px;
+	font-size: 16px;
+}
+
+/*Gallery*/
+
+.container {
+	max-width: 1224px;
+	width: 90%;
+	margin: auto;
+	padding: 40px 0;
+
+}
+
+.title {
+	display: flex;
+	margin-bottom: 2rem;
+	justify-content: center;
+	font-size: 36px;
+
+}
+
+.photo-gallery {
+	display: flex;
+	gap: 20px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.photo img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.gallery-photo {
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 15px;
+	
+}
+
+.gallery-photo:hover {
+	scale: 1.065;
+	box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.5);
+}
+/*about us*/
+.about-us{
+    display: flex;
+    gap: 48px;
+    align-items: start;
+    justify-content: space-between;
+    padding: 96px 72px;
+    background-color: #fafafa;
+}
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: center;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top : auto;
+	padding: 24px 16px;
+	text-align: center;
+	background: #7CB9E8;
+	height: 500px;
+
+}
+
+.copyright {
+	background: #7CB9E8;
+}
+
+
+/* Contact Us Page */
+
+.contact-us-body {
+	background: gray;
+	background-size: cover;
+	background-position: center;
+
+	background-image: url(../imgs/grouper\ A.jpg);
+
+}
+.contact-us-body{
+	border-style: dashed;
+}
+
+.contact-us-heading {
+	color: white;
+	text-shadow: 3px 3px #000000;
+	padding-top: 10px;
+	font-size: 60px;
+	margin-left: 53%;
+	transform: translate(-50%);
+
+
+}
+
+.contact-us-container {
+	background: transparent;
+	width: 50%;
+	margin-left: 50%;
+	margin-top: 4%;
+	transform: translate(-50%);
+	border-style: dashed;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+	border-radius: 12px;
+	padding: 5px;
+
+}
+
+.contact-us-input {
+	background-color: white;
+	width: 70%;
+	margin-left: 15%;
+	font-size: 20px;
+	padding: 16px 16px;
+	border-radius: 10px;
+	border-color: black;
+	margin-bottom: 15px;
+
+}
+
+.contact-us-message {
+	background-color: white;
+	width: 70%;
+	margin-left: 15%;
+	font-size: 20px;
+	padding: 16px 16px;
+	border-radius: 10px;
+	border-color: black;
+	margin-bottom: 25px;
+}
+
+.contact-us-input:focus-within {
+	outline: none;
+	border-color: lightcoral;
+	border-width: 3px;
+}
+
+.contact-us-message:focus-within {
+	outline: none;
+	border-color:  lightcoral;
+	border-width: 3px;
+	border-width: 3px;
+}
+
+.submit-button {
+	background-color: lightcoral;
+	border-radius: 20px;
+	border-color: black;
+	font-size: 22px;
+	padding: 10px 20px;
+	text-align: center;
+	display: flex;
+	margin-left: 47%;
+	transform: translate(-50%);
+
+}
+
+.submit-button:hover {
+	opacity: 80%;
+}
+
+.contact-us-home {
+	background-color: rgb(69, 221, 168);
+	width: 5%;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	box-shadow: 3px 3px rgb(26, 26, 26);
+}
+
+.contact-us-home:hover {
+	transform: translate(2px, 2px);
+	box-shadow: 1px 1px rgb(26, 26, 26);
+	transition: text-transform 0.3s ease;
+	text-transform: uppercase;
+}
+
+
+.contact-us-home2 {
+	text-decoration: none;
+}
+.header {
+    background-color: transparent;
+    box-shadow: none; 
+    transition: all 0.1s ease; 
+	
+}
+
+.header.fixed {
+    background-color: rgba(142, 142, 142, 0.436); 
+    box-shadow: 0  rgba(0, 0, 0, 0.1);
+}
+
+
+/* slideshow */
+#slider{
+	overflow: hidden;
+	object-fit: cover;
+	
+
+}
+#slider{
+	position: relative;
+	width: 500%;
+	margin: auto;
+	left: auto;
+	animation: 20s slider infinite;
+
+}
+#slider figure img{
+	float: left;
+	width: 5%;
+
+}
+@keyframes  slider {
+    0% { 
+		left: 0%;
+	}
+	20%{
+		left:-15%;
+	}
+	40%{
+		left:-30%;
+	}
+	60%{
+		left:-45%;
+	}
+	80%{
+		left:-60%;
+	}
+	100%{
+		left:-75%;
+	}
+
+
+
+}

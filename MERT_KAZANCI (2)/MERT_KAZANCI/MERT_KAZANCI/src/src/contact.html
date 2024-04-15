@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"
+    >
+</head>
+<body class="contact-us-body">
+    <h2 class="contact-us-home"> <a href="index.html" class="contact-us-home2">Home</a> </h2>
+    
+    <div class="contact-us-container">
+
+        <h1 class="contact-us-heading">Contact Form</h1>
+        <form id="contactForm" action="https://formspree.io/f/myyrnqea" method="post">
+            <input type="text" name="" id="textName" placeholder="First Name" class="contact-us-input" required>
+            <input type="text" name="" id="textLname" placeholder="Last Name" class="contact-us-input" required>
+            <input type="text" name="" id="textMail" placeholder="E-mail" class="contact-us-input" required>
+            <input type="text" name="" id="textDate" placeholder="Date" class="contact-us-input" required>
+            <input type="text" name="" id="textPhone" placeholder="Phone" class="contact-us-input" required>
+            <textarea name="message" id="textMessage" cols="60" rows="5" placeholder="Enter Text" autocomplete="off" required class="contact-us-message"></textarea>
+            <button type="submit" class="submit-button" onclick="getval()">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
