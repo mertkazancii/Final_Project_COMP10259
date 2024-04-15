@@ -468,19 +468,20 @@ body{
 	overflow: hidden;
 	object-fit: cover;
 	
-
 }
+
 #slider{
 	position: relative;
-	width: 500%;
+	white-space: nowrap;
+	width: 100%;
 	margin: auto;
 	left: auto;
 	animation: 20s slider infinite;
 
 }
 #slider figure img{
-	float: left;
-	width: 5%;
+	width: 25%;
+	display: inline-block;
 
 }
 @keyframes  slider {
